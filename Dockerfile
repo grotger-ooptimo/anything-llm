@@ -10,7 +10,7 @@ services:
     environment:
     # Adjust for your environment
       - STORAGE_DIR=/app/server/storage
-      - JWT_SECRET="85cb065aa798cc13e04fa7517d1af65c"
+      - JWT_SECRET=""
       - LLM_PROVIDER=ollama
       - OLLAMA_BASE_PATH=http://51.159.164.22:11434
       - OLLAMA_MODEL_PREF=llama2
@@ -26,7 +26,7 @@ services:
       # Add any other keys here for services or settings
       # you can find in the docker/.env.example file
     volumes:
-      - anythingllm_storage:/app/server/storage
+      - anythingllm_storage: /etc/easypanel/projects/imagin/llm_fontend_imagin/storage
     restart: always
 
 volumes:
@@ -35,4 +35,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /etc/easypanel/projects/imagin/llm_fontend_imagin/code/
+      device: /etc/easypanel/projects/imagin/llm_fontend_imagin/storage
