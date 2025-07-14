@@ -4,13 +4,13 @@ services:
     image: mintplexlabs/anythingllm
     container_name: anythingllm
     ports:
-    - "3001:3008"
+    - "3008:3008"
     cap_add:
       - SYS_ADMIN
     environment:
     # Adjust for your environment
       - STORAGE_DIR=/app/server/storage
-      - JWT_SECRET="make this a large list of random numbers and letters 20+"
+      - JWT_SECRET="85cb065aa798cc13e04fa7517d1af65c"
       - LLM_PROVIDER=ollama
       - OLLAMA_BASE_PATH=http://51.159.164.22:11434
       - OLLAMA_MODEL_PREF=llama2
