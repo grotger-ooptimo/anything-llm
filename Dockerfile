@@ -35,4 +35,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /
+      device: /etc/easypanel/projects/imagin/llm_fontend_imagin/code/
